@@ -24,9 +24,9 @@ jobs:
           destination: reports
 
       - run:
-          - run:
-        name: chmod permissions
-        command: chmod +x ./gradlew
+          name: Assemble release build
+          command: |
+            ./gradlew assembleDebug
 workflows:
   sample:
     jobs:
